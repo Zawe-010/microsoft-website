@@ -7,7 +7,7 @@
     <title>Microsoft Homepage</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         .large-card {
             background-image: url('images/bg.avif');
@@ -150,21 +150,92 @@
         .product-card:hover {
             transform: scale(1.05);
         }
+
+        /* Custom Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: flex-start;
+            flex-grow: 1;
+            padding-left: 0;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 20px;
+        }
+
+        .navbar-nav .nav-item:last-child {
+            margin-right: 0;
+        }
+
+        .navbar-nav-left {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .navbar-nav-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .navbar-nav-right .nav-item {
+            margin-left: 15px;
+            text-decoration: none;
+        }
+
+        .navbar-nav-left .nav-link {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .navbar-nav-right .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            text-decoration: none;
+        }
+
+    
+        .navbar-nav-left .nav-link:hover,
+        .navbar-nav-right .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        /* New Styles */
+        .navbar-nav .nav-item a.nav-link {
+            font-size: 1rem;
+            /* Make Microsoft link same size as the others */
+        }
+
+        .navbar-nav .nav-item.active .nav-link {
+            border-bottom: none;
+        }
+
+        .navbar-nav .nav-item:last-child {
+            margin-left: 50px;
+        }
     </style>
 </head>
 
 <body>
     <!-- Navbar Section -->
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img src="images/microsoft.png" alt="Logo" style="height: 20px;">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+    <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="images/microsoft.png" alt="Logo" style="height: 20px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav-left">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Microsoft 365</a>
                     </li>
                     <li class="nav-item">
@@ -188,14 +259,40 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Small Business</a>
                     </li>
+                    <!-- Moved "Support" here, after "Small Business" -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">Support</a>
                     </li>
                 </ul>
             </div>
-        </nav>
-    </div>
-
+    
+            <!-- All Microsoft Dropdown -->
+            <div class="navbar-nav-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">All Microsoft</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Windows</a></li>
+                        <li><a class="dropdown-item" href="#">Microsoft 365</a></li>
+                        <li><a class="dropdown-item" href="#">Surface</a></li>
+                        <li><a class="dropdown-item" href="#">Xbox</a></li>
+                        <li><a class="dropdown-item" href="#">Deals</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
+                </li>
+            </div>
+        </div>
+    </nav>
+</div>
+    <!-- Carousel Section -->
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -268,7 +365,7 @@
         </div>
     </section>
 
-    <!-- Four Product Cards -->
+    <!-- Four Product Cards Section -->
     <section class="container my-5">
         <div class="row text-center">
             <div class="col-md-3">
@@ -303,7 +400,7 @@
                 <div class="product-card">
                     <img src="images/sl5.avif" alt="Office 365">
                     <h3>Copilot is your AI companion</h3>
-                    <p>Always by your side, ready to support you whenever and wherever you need it..</p>
+                    <p>Always by your side, ready to support you whenever and wherever you need it.</p>
                     <a href="#" class="btn btn-primary">Download the Copilot app</a>
                 </div>
             </div>
@@ -315,7 +412,8 @@
         <section class="large-card">
             <div class="text">
                 <h2>Game Pass</h2>
-                <p>Play new games on day one. Plus, enjoy<br> hundreds of high-quality games with friends<br> on console and PC.
+                <p>Play new games on day one. Plus, enjoy<br> hundreds of high-quality games with friends<br> on console
+                    and PC.
                 </p>
                 <a href="#" class="btn btn-primary">Join Us</a>
             </div>
@@ -325,7 +423,6 @@
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
