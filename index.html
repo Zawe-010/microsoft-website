@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Homepage</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .large-card {
+            background-image: url('images/bg.avif');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+            margin-top: 50px;
+            height: 500px;
+        }
+
+        .large-card .text {
+            max-width: 50%;
+        }
+
+        .large-card .text h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .large-card .text p {
+            font-size: 1.2rem;
+        }
+
+        .large-card .image img {
+            max-width: 45%;
+            border-radius: 10px;
+        }
+
+        .icon-section {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .icon-section .icon {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .icon-section .icon img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .icon-section .icon p {
+            margin-top: 10px;
+        }
+
+        .icon-section .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-item {
+            height: 80vh;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        .carousel-item img {
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            text-align: left;
+            color: rgb(0, 0, 0);
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+
+        .carousel-caption .text-bg-wrapper {
+            background-color: white;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 0;
+        }
+
+        .carousel-caption .btn-blue {
+            background-color: #0078d4;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .carousel-caption .btn-blue:hover {
+            background-color: #005a9e;
+            color: white;
+        }
+
+        .carousel-caption .play-text {
+            color: black;
+            text-decoration: none;
+            font-size: 1.3rem;
+            margin-left: 10px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            transition: transform 0.3s;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="images/microsoft.png" alt="Logo" style="height: 20px;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Microsoft 365</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Copilot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Windows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Surface</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Xbox</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Small Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/sl1.avif" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption">
+                    <h3>Achieve the extraordinary</h3>
+                    <p>Microsoft 365 delivers cloud storage, security, and <br> Microsoft Copilot in your favorite
+                        apps—all
+                        in one <br> plan.</p>
+                    <a href="#" class="btn btn-blue">Shop Microsoft 365</a>
+                    <a href="#" class="play-text"> ▷See it in action</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/sl2.avif" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption">
+                    <div class="text-bg-wrapper">
+                        <h3>Meet Surface Pro</h3>
+                        <p>This laptop's unrivalled flexibility and AI features like <br> Live Captions and Cocreator
+                            enable you to
+                            do more <br> than you ever imagined.</p>
+                        <a href="#" class="btn btn-blue">Shop now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Icons Section -->
+    <section class="icon-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 icon">
+                    <img src="images/icon 1.svg" alt="Windows">
+                    <p><a href="#">Shop Surface devices</a></p>
+                </div>
+                <div class="col-2 icon">
+                    <img src="images/icon 2.svg" alt="Office">
+                    <p><a href="#">Shop Xbox games and consoles</a></p>
+                </div>
+                <div class="col-2 icon">
+                    <img src="images/icon 3.svg" alt="Xbox">
+                    <p><a href="#">Shop for accessories</a></p>
+                </div>
+                <div class="col-2 icon">
+                    <img src="images/icon 4.svg" alt="Xbox">
+                    <p><a href="#">Shop for your business</a></p>
+                </div>
+                <div class="col-2 icon">
+                    <img src="images/icon 5.svg" alt="Xbox">
+                    <p><a href="#">Find your next PC</a></p>
+                </div>
+                <div class="col-2 icon">
+                    <img src="images/icon 6.svg" alt="Xbox">
+                    <p><a href="#">Choose your Microsoft 365</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Four Product Cards -->
+    <section class="container my-5">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/sl3.avif" alt="Windows 11">
+                    <h3>Surface Laptop for Business, Copilot+ PC | Intel</h3>
+                    <p>Uncompromising power, all-day battery life,* and unique AI experiences—featuring Intel® Core™
+                        Ultra processors (Series 2).</p>
+                    <a href="#" class="btn btn-primary">Shop now</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/sl4.avif" alt="Surface">
+                    <h3>$10 off select Xbox Wireless Controllers</h3>
+                    <p>Gear up for victory with controllers built for comfort and precision.</p>
+                    <a href="#" class="btn btn-primary">Shop Xbox controllers</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/sl1.webp" alt="Xbox">
+                    <h3>Xbox Series S</h3>
+                    <p>Next-gen performance in the smallest Xbox ever.</p>
+                    <a href="#" class="btn btn-primary">Shop Xbox Series S</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/sl5.avif" alt="Office 365">
+                    <h3>Copilot is your AI companion</h3>
+                    <p>Always by your side, ready to support you whenever and wherever you need it..</p>
+                    <a href="#" class="btn btn-primary">Download the Copilot app</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Large Card Section -->
+    <div class="container">
+        <section class="large-card">
+            <div class="text">
+                <h2>Game Pass</h2>
+                <p>Play new games on day one. Plus, enjoy<br> hundreds of high-quality games with friends<br> on console and PC.
+                </p>
+                <a href="#" class="btn btn-primary">Join Us</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
