@@ -201,7 +201,7 @@
             text-decoration: none;
         }
 
-    
+
         .navbar-nav-left .nav-link:hover,
         .navbar-nav-right .nav-link:hover {
             text-decoration: underline;
@@ -220,78 +220,111 @@
         .navbar-nav .nav-item:last-child {
             margin-left: 50px;
         }
+
+        /* Follow Microsoft Section */
+        .follow-microsoft {
+            background-color: #ffffff;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .follow-microsoft h3 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-left: 0;
+        }
+
+        .social-icon {
+            display: inline-block;
+        }
+
+        .social-img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-icon:hover .social-img {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 
 <body>
     <!-- Navbar Section -->
     <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="images/microsoft.png" alt="Logo" style="height: 20px;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav-left">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Microsoft 365</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Teams</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Copilot</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Windows</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Surface</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Xbox</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Deals</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Small Business</a>
-                    </li>
-                    <!-- Moved "Support" here, after "Small Business" -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Support</a>
-                    </li>
-                </ul>
-            </div>
-    
-            <!-- All Microsoft Dropdown -->
-            <div class="navbar-nav-right">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">All Microsoft</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Windows</a></li>
-                        <li><a class="dropdown-item" href="#">Microsoft 365</a></li>
-                        <li><a class="dropdown-item" href="#">Surface</a></li>
-                        <li><a class="dropdown-item" href="#">Xbox</a></li>
-                        <li><a class="dropdown-item" href="#">Deals</a></li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="images/microsoft.png" alt="Logo" style="height: 20px;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav-left">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Microsoft 365</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Teams</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Copilot</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Windows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Surface</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Xbox</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Small Business</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Support</a>
+                        </li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
-                </li>
+                </div>
+
+                <!-- All Microsoft Dropdown -->
+                <div class="navbar-nav-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">All Microsoft</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Windows</a></li>
+                            <li><a class="dropdown-item" href="#">Microsoft 365</a></li>
+                            <li><a class="dropdown-item" href="#">Surface</a></li>
+                            <li><a class="dropdown-item" href="#">Xbox</a></li>
+                            <li><a class="dropdown-item" href="#">Deals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                </div>
             </div>
-        </div>
-    </nav>
-</div>
+        </nav>
+    </div>
     <!-- Carousel Section -->
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
@@ -419,6 +452,154 @@
             </div>
         </section>
     </div>
+
+    <!-- Four Business Cards Section -->
+    <section class="container my-5">
+        <h2>For business</h2>
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/sl6.avif" alt="Windows 11">
+                    <h3>Surface Pro for Business, Copilot+ PC | Intel</h3>
+                    <p>Ultra-versatile and built with Intel® Core™ Ultra processors (Series 2) that power AI experiences
+                        to amplify your team’s
+                        productivity.</p>
+                    <a href="#" class="btn btn-primary">Shop now</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/sl7.avif" alt="Surface">
+                    <h3>Microsoft 365 Copilot</h3>
+                    <p>Save time and focus on the things that matter most with AI in Microsoft 365 for business.</p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/sl8.avif" alt="Xbox">
+                    <h3>Get Microsoft Teams for your business</h3>
+                    <p>Online meetings, chat, real-time collaboration, and shared cloud storage—all in one place.</p>
+                    <a href="#" class="btn btn-primary">Find the right plan for your business</a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="images/sl9.avif" alt="Office 365">
+                    <h3>Join the era of AI</h3>
+                    <p>Create, communicate, and code with the latest Microsoft AI solutions.</p>
+                    <a href="#" class="btn btn-primary">Explore AI solutions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Four AI and Copilot Cards Section -->
+    <section class="container">
+        <h2>Explore more about AI and Copilot</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="images/sl10.avif" alt="Windows 11">
+                    <h3>Surface Pro for Business, Copilot+ PC | Intel</h3>
+                    <p>Ultra-versatile and built with Intel® Core™ Ultra processors (Series 2) that power AI experiences
+                        to amplify your team’s
+                        productivity.</p>
+                    <a href="#" class="btn btn-primary">Read the story</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="images/sl11.avif" alt="Surface">
+                    <h3>Microsoft 365 Copilot</h3>
+                    <p>Save time and focus on the things that matter most with AI in Microsoft 365 for business.</p>
+                    <a href="#" class="btn btn-primary">Explore AI-powered learning</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="images/sl12.avif" alt="Xbox">
+                    <h3>Get Microsoft Teams for your business</h3>
+                    <p>Online meetings, chat, real-time collaboration, and shared cloud storage—all in one place.</p>
+                    <a href="#" class="btn btn-primary">Explore how others are using AI</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+
+    <!-- Carousel Section -->
+    <div class="container">
+        <div id="carouselExample2" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/sl13.avif" class="d-block w-100" alt="Slide 1">
+                    <div class="carousel-caption">
+                        <h3>Achieve the extraordinary</h3>
+                        <p>Microsoft 365 delivers cloud storage, security, and <br> Microsoft Copilot in your favorite
+                            apps—all
+                            in one <br> plan.</p>
+                        <a href="#" class="btn btn-blue">Shop Microsoft 365</a>
+                        <a href="#" class="play-text"> ▷See it in action</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/sl14.avif" class="d-block w-100" alt="Slide 2">
+                    <div class="carousel-caption">
+                        <div class="text-bg-wrapper">
+                            <h3>Meet Surface Pro</h3>
+                            <p>This laptop's unrivalled flexibility and AI features like <br> Live Captions and
+                                Cocreator
+                                enable you to
+                                do more <br> than you ever imagined.</p>
+                            <a href="#" class="btn btn-blue">Shop now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Carousel controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Follow Microsoft Section -->
+    <section class="follow-microsoft">
+        <div class="container">
+            <h3>Follow Microsoft</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon" target="_blank">
+                    <img src="images/Facebook 2x.avif" alt="Facebook" class="social-img">
+                </a>
+                <a href="#" class="social-icon" target="_blank">
+                    <img src="images/twitter.webp" alt="Twitter" class="social-img">
+                </a>
+                <a href="#" class="social-icon" target="_blank">
+                    <img src="images/Linkedin 2x.avif" alt="Instagram" class="social-img">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
